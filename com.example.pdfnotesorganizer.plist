@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.pdfnotesorganizer</string>
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Remplacez par le chemin vers votre python (ex: /usr/local/bin/python3 ou /usr/bin/python3) -->
+        <string>/usr/local/bin/python3</string>
+        <!-- Remplacez par le chemin absolu vers le script -->
+        <string>/Users/VOTRE_NOM/Chemin/Vers/PDF-reading-companion/organize_notes.py</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>18</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/pdfnotesorganizer.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/pdfnotesorganizer.error.log</string>
+</dict>
+</plist>
