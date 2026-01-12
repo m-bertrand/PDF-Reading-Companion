@@ -16,3 +16,15 @@ Ce script automatise l'extraction, la formalisation et l'indexation des notes pr
    ```bash
    pip install spacy striprtf
    python -m spacy download fr_core_news_sm
+
+3. Avant de lancer le script, vous devez définir vos propres répertoires de travail dans la section `CONFIGURATION` au début du fichier `main.py` :
+
+a. **SOURCE_DIRS** : Liste des dossiers contenant vos PDF annotés (ex: `Path.home() / "Documents/Recherche"`).
+b. **DEST_DIR** : Le dossier où vous souhaitez voir apparaître vos notes Markdown et votre Index.
+
+```python
+# Exemple de modification dans main.py
+SOURCE_DIRS = [
+    Path.home() / "Mon/Dossier/Lectures",
+]
+DEST_DIR = Path.home() / "Mon/Dossier/Notes"
