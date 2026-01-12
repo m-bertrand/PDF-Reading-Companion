@@ -1,30 +1,25 @@
 # 📚 SkimKnowledge-Automator
 
-> **"Le présent est gros de l'avenir."** — Transformez vos annotations PDF en une base de connaissances structurée.
+> **"The present is big with the future." / "Le présent est gros de l'avenir."** — *G.W. Leibniz*
 
-Ce script automatise l'extraction, la formalisation et l'indexation des notes prises avec l'application **Skim** (macOS). Il convertit vos annotations binaires en fichiers Markdown enrichis par NLP pour une intégration fluide dans votre second cerveau (**Obsidian**, **Logseq**, etc.).
+[English](#english) | [Français](#français)
 
-## ✨ Nouvelles Fonctionnalités
-- **Standardisation NLP** : Utilisation de la lemmatisation (Spacy `fr_core_news_sm`) pour des tags cohérents (ex: *concepts* -> *concept*).
-- **Mode Dry Run** : Testez le scan et l'analyse sans écrire de fichiers sur le disque.
-- **Gestion Robuste des Dépendances** : Utilisation de `sys.executable` pour une portabilité totale.
+---
 
-## 🛠️ Installation
+## English
 
-1. **Prérequis** : macOS et [Skim](https://skim-app.sourceforge.io/).
-2. **Installation des dépendances** :
+Transform your PDF annotations into a structured knowledge base. This script automates the extraction, formalization, and indexing of notes taken with the **Skim** app (macOS). It converts binary annotations into Markdown files enriched by NLP for seamless integration into your second brain (**Obsidian**, **Logseq**, etc.).
+
+### ✨ Features
+- **NLP Standardization**: Uses lemmatization (Spacy `fr_core_news_sm`) for consistent tagging (e.g., *concepts* -> *concept*).
+- **Dry Run Mode**: Test the scan and analysis without writing any files to disk.
+- **Robust Dependency Management**: Uses `sys.executable` for full portability.
+- **Incremental Workflow**: Only processes new or modified annotations to avoid redundancy.
+
+### 🛠️ Installation & Setup
+
+1. **Prerequisites**: macOS and [Skim](https://skim-app.sourceforge.io/).
+2. **Dependencies**:
    ```bash
-   pip install spacy striprtf
+   pip install spacy striprtf biplist
    python -m spacy download fr_core_news_sm
-
-3. Avant de lancer le script, vous devez définir vos propres répertoires de travail dans la section `CONFIGURATION` au début du fichier `main.py` :
-
-a. **SOURCE_DIRS** : Liste des dossiers contenant vos PDF annotés (ex: `Path.home() / "Documents/Recherche"`).
-b. **DEST_DIR** : Le dossier où vous souhaitez voir apparaître vos notes Markdown et votre Index.
-
-```python
-# Exemple de modification dans main.py
-SOURCE_DIRS = [
-    Path.home() / "Mon/Dossier/Lectures",
-]
-DEST_DIR = Path.home() / "Mon/Dossier/Notes"
