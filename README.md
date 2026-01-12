@@ -1,23 +1,23 @@
-# 📚 SkimKnowledge-Automator
+# SkimKnowledge-Automator
 
 > **"The present is big with the future." / "Le présent est gros de l'avenir."** — *G.W. Leibniz*
 
-[English](#english) | [Français](#français)
+[English](#en) | [Français](#fr)
 
 ---
 
+<a name="en"></a>
 ## English
 
-Transform your PDF annotations into a structured knowledge base. This script automates the extraction, formalization, and indexing of notes taken with the **Skim** app (macOS). It converts binary annotations into Markdown files enriched by NLP for seamless integration into your second brain (**Obsidian**, **Logseq**, etc.).
+Automated tool for extracting, formalizing, and indexing **Skim** annotations (macOS) into **Markdown** files.
 
-### ✨ Features
-- **NLP Standardization**: Uses lemmatization (Spacy `fr_core_news_sm`) for consistent tagging (e.g., *concepts* -> *concept*).
-- **Dry Run Mode**: Test the scan and analysis without writing any files to disk.
-- **Robust Dependency Management**: Uses `sys.executable` for full portability.
-- **Incremental Workflow**: Only processes new or modified annotations to avoid redundancy.
+### Features
+- **NLP Processing**: Lemmatization via Spacy (`fr_core_news_sm`) for standardized tagging.
+- **Incremental Workflow**: Only processes new or modified notes.
+- **Dry Run Mode**: Test the scan without filesystem modifications.
+- **Portability**: Managed through `sys.executable` and `pathlib`.
 
-### 🛠️ Installation & Setup
-
+### Setup
 1. **Prerequisites**: macOS and [Skim](https://skim-app.sourceforge.io/).
 2. **Dependencies**:
    ```bash
