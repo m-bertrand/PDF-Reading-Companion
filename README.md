@@ -46,7 +46,7 @@ python organize_notes.py --dry-run
 ```
 ### Note on the generation of .rtf annotations
 
-I have included two files: 'skim_to_text.py' and 'Skim_footer.applescript'. When executed, the AppleScript generates .rtf files containing your Skim annotations. It only generates the annotations of the **PDF files opened in Skim at the same time** when launched. It performs this task by calling the Python script, which handles the core data extraction. 
+I have included two files: 'skim_to_text.py' and 'Skim_footer.applescript'. When executed, the AppleScript generates .rtf files containing your Skim annotations. It only generates the annotations of the **PDF files opened in Skim at the same time**. It performs this task by calling the Python script, which handles the core data extraction. 
 
 **Note**: You must update the file paths within the AppleScript code to match your local environment.
 
@@ -86,7 +86,7 @@ python organize_notes.py
 ```
 ### Note sur la génération des annotations en .rtf
 
-Ce dépôt contient deux fichiers : 'skim_to_text.py' et 'Skim_footer.applescript'. L'exécution du script AppleScript génère automatiquement des fichiers .rtf regroupant vos annotations Skim. Il génère uniquement les annotations des **fichiers PDF ouverts dans Skim** lors de son lancement. Pour ce faire, il appelle le script Python qui assure le traitement des données. 
+Ce dépôt contient deux fichiers : 'skim_to_text.py' et 'Skim_footer.applescript'. L'exécution du script AppleScript génère automatiquement des fichiers .rtf regroupant vos annotations Skim. Lors de son exécution, il génère uniquement les annotations des **fichiers PDF ouverts dans Skim au même moment**. Pour ce faire, il appelle le script Python qui assure le traitement des données. 
 
 **Note** : vous devez impérativement adapter les chemins d'accès (paths) dans le code AppleScript pour qu'ils correspondent à votre configuration locale. 
 
